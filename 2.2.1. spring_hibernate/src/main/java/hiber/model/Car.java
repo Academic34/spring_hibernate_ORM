@@ -1,13 +1,10 @@
 package hiber.model;
 
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "car")
-@Component
 public class Car {
 
     @Id
@@ -20,6 +17,11 @@ public class Car {
 
     @Column(name = "series")
     private int series;
+
+    public Car(String model, int series) {
+        this.model = model;
+        this.series = series;
+    }
 
     public int getId() {
         return id;
@@ -46,12 +48,6 @@ public class Car {
     }
 
     public Car() {
-    }
-
-    public Car(int id, String model, int series) {
-        this.id = id;
-        this.model = model;
-        this.series = series;
     }
 
     @Override
