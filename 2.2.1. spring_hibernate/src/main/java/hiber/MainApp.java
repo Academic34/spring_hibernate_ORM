@@ -38,11 +38,13 @@ public class MainApp {
         }
 
         User user = userService.getUser("Lada", 2114);
-        System.out.println("Id = " + user.getId());
-        System.out.println("First Name = " + user.getFirstName());
-        System.out.println("Last Name = " + user.getLastName());
-        System.out.println("Email = " + user.getEmail());
-        System.out.println("Car = " + user.getCar().toString());
+        if (user != null) {
+            System.out.println("Id = " + user.getId());
+            System.out.println("First Name = " + user.getFirstName());
+            System.out.println("Last Name = " + user.getLastName());
+            System.out.println("Email = " + user.getEmail());
+            System.out.println("Car = " + user.getCar().toString());
+        }
 
         context.close();
     }

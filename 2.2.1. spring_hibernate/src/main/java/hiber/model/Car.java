@@ -18,6 +18,9 @@ public class Car {
     @Column(name = "series")
     private int series;
 
+    public Car() {
+    }
+
     public Car(String model, int series) {
         this.model = model;
         this.series = series;
@@ -45,9 +48,6 @@ public class Car {
 
     public void setSeries(int series) {
         this.series = series;
-    }
-
-    public Car() {
     }
 
     @Override
