@@ -17,17 +17,17 @@ public class MainApp {
 
         UserService userService = context.getBean(UserService.class);
 
-        userService.add(new User("User1", "Lastname1", "user1@mail.ru",
+        userService.addUser(new User("User1", "Lastname1", "user1@mail.ru",
                 new Car("Tesla", 5)));
-        userService.add(new User("User2", "Lastname2", "user2@mail.ru",
+        userService.addUser(new User("User2", "Lastname2", "user2@mail.ru",
                 new Car("Lada", 2114)));
-        userService.add(new User("User3", "Lastname3", "user3@mail.ru",
+        userService.addUser(new User("User3", "Lastname3", "user3@mail.ru",
                 new Car("Opel", 8)));
-        userService.add(new User("User4", "Lastname4", "user4@mail.ru",
+        userService.addUser(new User("User4", "Lastname4", "user4@mail.ru",
                 new Car("Ford", 4)));
 
 
-        List<User> users = userService.listUsers();
+        List<User> users = userService.getListUsers();
         for (User user : users) {
             System.out.println("Id = " + user.getId());
             System.out.println("First Name = " + user.getFirstName());
